@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<meta name="description" content="Unify Admin Panel" />
+	<meta name="keywords" content="Tables, Admin, Dashboard, Bootstrap4, Sass, CSS3, HTML5, Responsive Dashboard, Responsive Admin Template, Admin Template, Best Admin Template, Bootstrap Template, Themeforest" />
+	<meta name="author" content="Bootstrap Gallery" />
+	<link rel="shortcut icon" href="./img/cglogo1.ico" />
+	<title>Digital Thread - Blockchain</title>
+
+<link rel="stylesheet" media="screen" href="./stylesheets/particles.css">
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>	
+<style>
+canvas {
+  display: block;
+  position : fixed;
+  z-index: -999;
+  vertical-align: bottom;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #0a0f55;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+
+.timeline {
+    list-style: none;
+    padding: 20px 0 20px;
+    position: relative;
+	
+}
+
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
+  
+}
+
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+  
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+  
+}
+
+.timeline > li:after {
+  clear: both;
+  
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+  
+}
+
+.timeline > li:after {
+  clear: both;
+  
+}
+
+.timeline > li > .timeline-panel {
+  width: 46%;
+  float: left;
+  border: 2px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  
+}
+
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-right: 0 solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+  
+}
+
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+  
+}
+
+.timeline > li > .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+  
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+  
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+  
+}
+
+.timeline-badge.primary {
+    background-color: #2e6da4 !important;
+	
+}
+
+.timeline-badge.success {
+    background-color: #3f903f !important;
+	
+}
+
+.timeline-badge.warning {
+    background-color: #f0ad4e !important;
+	
+}
+
+.timeline-badge.danger {
+    background-color: #d9534f !important;
+	
+}
+
+.timeline-badge.info {
+    background-color: #5bc0de !important;
+	
+}
+
+.timeline-title {
+    margin-top: 0;
+    color: inherit;
+	
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+    margin-bottom: 0;
+	z-index: 999999;
+}
+
+.timeline-body > p + p {
+  margin-top: 5px;
+  z-index: 999999;
+}
+
+@media (max-width: 767px) {
+  ul.timeline:before {
+    left: 40px;
+	z-index: 999999;
+  }
+  
+  ul.timeline > li > .timeline-panel {
+    width: calc(100% - 90px);
+    width: -moz-calc(100% - 90px);
+    width: -webkit-calc(100% - 90px);
+	z-index: 999999;
+  }
+  
+  ul.timeline > li > .timeline-badge {
+    left: 15px;
+    margin-left: 0;
+    top: 16px;
+	z-index: 999999;
+  }
+  
+  ul.timeline > li > .timeline-panel {
+    float: right;
+	z-index: 999999;
+  }
+  
+  ul.timeline > li > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+	z-index: 999999;
+  }
+  
+  ul.timeline > li > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+	z-index: 999999;
+  }
+}
+</style>
+</head>
+<body id="particles-js" style="position : absolute; width:100%; height:100%; z-index:-1;">
+
+<div class="container" id="backG">
+<div class="row" style="z-index: 1010;">
+	<h3 align="center" style="color:#ffffff;">Digital Thread</h3>	
+	
+	<div align="right"style="color:#ffffff;">
+		
+	<input id="vin_order_input">&emsp;
+	<button type="button" class="btn btn-light" onclick="updateBC()">SEARCH</button>
+
+	<!--	<input type="button" value="OK"  onclick="updateBC()">	-->
+
+	<div id="URL_status"></div>
+	</div>
+	<ul id= "tline" align="center" class="timeline" style="position:absolute;width: 75%;margin: auto;">        
+    </ul>
+</div>
+</div>
+
+<script src="./javascripts/web3.js"></script>  
+<!--<script src="./javascripts/bc_view.js"></script> -->
+<script src="./javascripts/particles.js"></script>
+<script>
+/*
+$.ajax({
+crossOrigin: true,
+url: "http://cgdigitalthread.mybluemix.net/insertpdord/",
+data: { plantName: "xyz", vehicleType: "MARUTI", quantity:1 },
+type : "POST",
+success: function(data) {
+console.log(data);
+console.log("success");
+},
+error:function (err){
+console.log(err);
+}
+});*/
+
+particlesJS('particles-js',
+  
+  {
+    "particles": {
+    "number": {
+      "value": 100,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff"
+    },
+    "shape": {
+      "type": "edge",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 3,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#ffffff",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 2.3,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "repulse"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": false
+    },
+    "modes": {
+      "grab": {
+        "distance": 400,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true,
+    "config_demo": {
+      "hide_card": false,
+      "background_color": "#b61924",
+      "background_image": "",
+      "background_position": "50% 100%",
+      "background_repeat": "round",
+      "background_size": "cover"
+    }
+  }
+
+);
+
+function updateBC(){
+	getData2(document.getElementById("vin_order_input").value);
+}
+
+function getData2(d){
+vinH=[];
+var vn = {vin: '"'+d+'"'};
+document.getElementById('tline').innerHTML = "";
+document.getElementById('URL_status').innerHTML = "Loading...";
+$.ajax({
+crossOrigin: true,
+url: "https://digitalthreadapi.mybluemix.net/dt/bcview",
+data: { vin : d},
+type : "POST",
+success: function(data) {
+
+document.getElementById('URL_status').innerHTML = "";
+
+if ((data.po.length > 0) ||
+(data.vinQR.length > 0) ||
+(data.componentQR.length > 0) ||
+(data.vehiclePartAfterQR.length > 0) ||
+(data.vehiclePartAfterQA.length > 0) ||
+(data.vehicleAfterQA.length > 0) ||
+(data.vehicleToDealer.length > 0) ||
+(data.vehicleSale.length > 0) ||
+(data.serviceEntry.length > 0) ||
+(data.warrantyRaised.length > 0) ||
+(data.markOldPartEOL.length > 0))
+{
+var i;
+	if(data.po){
+		for(i=0;i < data.po.length;i++){
+			data.po[i].fun = "POENTRY";
+			vinH.push(data.po[i]);
+		} 
+	}
+	if(data.vinQR){
+		for(i=0;i < data.vinQR.length;i++){
+			data.vinQR[i].fun = "VINQR";
+			vinH.push(data.vinQR[i]);			
+		}
+	}
+	if(data.componentQR){
+		for(i=0;i < data.componentQR.length;i++){
+			data.componentQR[i].fun = "COMPONENTQR";
+			vinH.push(data.componentQR[i]);
+		}
+	}
+	if(data.vehiclePartAfterQR){
+		for(i=0;i < data.vehiclePartAfterQR.length;i++){
+			data.vehiclePartAfterQR[i].fun = "VINPARTAFTQR";
+			vinH.push(data.vehiclePartAfterQR[i]);
+		}
+	}
+	if(data.vehiclePartAfterQA){
+		for(i=0;i < data.vehiclePartAfterQA.length;i++){
+			data.vehiclePartAfterQA[i].fun = "VINPARTAFTQA";
+			vinH.push(data.vehiclePartAfterQA[i]);
+		}
+	}
+	if(data.vehicleAfterQA){
+		for(i=0;i < data.vehicleAfterQA.length;i++){
+			data.vehicleAfterQA[i].fun = "VINAFTQA";
+			vinH.push(data.vehicleAfterQA[i]);
+		}	
+	}
+	if(data.vehicleToDealer){
+		for(i=0;i < data.vehicleToDealer.length;i++){
+			data.vehicleToDealer[i].fun = "VINTODEALER";
+			vinH.push(data.vehicleToDealer[i]);
+		}
+	}
+	if(data.vehicleSale){
+		for(i=0;i < data.vehicleSale.length;i++){
+			data.vehicleSale[i].fun = "VINTOSALE";
+			vinH.push(data.vehicleSale[i]);
+		}
+	}
+	if(data.serviceEntry){
+		for(i=0;i < data.serviceEntry.length;i++){
+			data.serviceEntry[i].fun = "SERVICE";
+			data.serviceEntry[i].timeStamp = data.serviceEntry[i].serviceDate;
+			vinH.push(data.serviceEntry[i]);
+		}
+	}
+	if(data.warrantyRaised){
+		for(i=0;i < data.warrantyRaised.length;i++){
+			data.warrantyRaised[i].fun = "WARRANTY";
+			data.warrantyRaised[i].timeStamp = data.warrantyRaised[i].wDate;
+			vinH.push(data.warrantyRaised[i]);
+		}
+	}
+	if(data.markOldPartEOL){
+		for(i=0;i < data.markOldPartEOL.length;i++){
+			data.markOldPartEOL[i].fun = "MARKOLDPART";
+			vinH.push(data.markOldPartEOL[i]);
+		}
+	}
+
+	console.log(vinH);
+	var h = vinH.sort(function(a, b){return a.timeStamp - b.timeStamp});
+	drawTimeline(h);
+	
+}else{
+document.getElementById('URL_status').innerHTML = "Record Not Found";
+}
+  
+},
+error: function(err){
+	console.log("ERROR CODE : "+ err.status);
+	console.log("Please retry");
+	document.getElementById('URL_status').innerHTML = "Please Retry";
+	}
+});
+}
+function drawTimeline(vinH){
+    var divBorder='';
+	for(var i =0 ; i < vinH.length; i++)
+	{	
+		switch(vinH[i].fun)
+		{
+			case 'VINQR':
+				var blockInput = '<div class="timeline-body" align="left">' + 'VIN : ' + vinH[i].vin + '<br>' + 'PART NO : ' + vinH[i].partNo + '<br>' + 'PRODUCTION ORDER : ' + vinH[i].poNo+'<br>' + 'PLANT : '+vinH[i].plant+'<br>'+ 'VEHICLE DESCRIPTION : '+vinH[i].vehicleDesc+'<br>'+ 'STAGE : '+vinH[i].stage+'</div>';
+				
+				divBorder='';
+				addTimeSeriesElement("Vehicle Details",new Date(vinH[i].timeStamp*1000).toLocaleString(),blockInput,divBorder);
+			break;
+			
+			case 'COMPONENTQR':
+				var blockInput = '<div class="timeline-body"  align="left">' + 
+				'VIN : ' + vinH[i].vin +
+				'<br>'+'PRODUCTION ORDER NUMBER : '+ vinH[i].poNo +
+				'<br>'+'OEM PART NO : ' + vinH[i].oemPartNo +
+				'<br>'+'OEM SERIAL NO : ' + vinH[i].oemSerialNo +
+				'<br>'+'MANUFACTURER PART NO : ' + vinH[i].manuPartNo +
+				'<br>'+'MANUFACTURER SERIAL NO : ' + vinH[i].manuSerialNo +
+				'<br>'+'VENDOR CODE : ' + vinH[i].vendorCode +
+				'<br>'+'MANUFACTURER NAME : ' + vinH[i].manuName +
+				'<br>'+'STAGE : ' + vinH[i].stage +
+				'<br>'+'STAGE OWNER : ' + vinH[i].stageOwner +
+				'</div>';
+				
+				//$("<your row html>").hide().insertAfter($(this).parent().parent()).slideDown('slow');
+				addTimeSeriesElement("Part Details",new Date(vinH[i].timeStamp*1000).toLocaleString(),blockInput,divBorder);	
+			break;
+			
+			case 'VINPARTAFTQR':
+			/*
+			"vin": "V0001",
+            "vendorCode": "VC0001",
+            "manuSerialNo": "MS0002",
+            "workCenter": "WC0001",
+            "oemPartNo": "OP0002",
+            "oemSerialNo": "OS0002",
+            "operator": "OPERATOR1",
+            "operation": "MOUNTING",
+            "workCenterIn": "1548415840",
+            "timeStamp": "1548415849",
+			*/
+				var blockInput = '<div class="timeline-body" align="left">' +
+				'VIN : ' + vinH[i].vin
+				+'<br>'+'OEM PART NO : ' + vinH[i].oemPartNo 
+				+'<br>'+'OEM SERIAL NO : ' + vinH[i].oemSerialNo 
+				+'<br>'+'MANUFACTURER SERIAL NO : ' + vinH[i].manuSerialNo
+				+'<br>'+'VENDOR CODE : ' + vinH[i].vendorCode
+				+'<br>'+'WORKCENTER : ' + vinH[i].workCenter
+				+'<br>'+'OPERATOR : ' + vinH[i].operator
+				+'<br>'+'OPERATION : ' + vinH[i].operation
+				+'<br>'+'WORKCENTER IN : ' + new Date(vinH[i].workCenterIn*1000).toLocaleString()
+				+ '</div>';
+				
+				//$("<your row html>").hide().insertAfter($(this).parent().parent()).slideDown('slow');
+				addTimeSeriesElement("Part Mapped",new Date(vinH[i].timeStamp*1000).toLocaleString(),blockInput,divBorder);	
+			break;
+			
+			case 'VINPARTAFTQA':
+				/*
+				    "vin": "V0001",
+					"vendorCode": "VC0001",
+					"manuSerialNo": "MS0002",
+					"oemSerialNo": "OS0002",
+					"oemPartNo": "OP0002",
+					"assetID": "ASSET01",
+					"name_value": "TORQUE_44.3_TEMPERATURE_55.4",
+					"quality": "OK",
+					"timeStamp": "1548416230",
+					"pstatus": "ACTIVE",
+					"workCenterOut": "1548416230"
+				*/
+				var blockInput = '<div class="timeline-body" align="left">' +
+				'VIN : ' + vinH[i].vin
+				+'<br>'+'OEM PART NO : ' + vinH[i].oemPartNo
+				+'<br>'+'OEM SERIAL NO : ' + vinH[i].oemSerialNo
+				+'<br>'+'QUALITY : ' + vinH[i].quality
+				+'<br><br>'+'PROCESS PARAMETER DETAILS  '
+				+'<br>'+'ASSET ID : '+ vinH[i].assetID
+				+'<br>'+'PARAMETER : '+ vinH[i].name_value
+				+'<br>'+'WORKCENTER OUT : ' + new Date(vinH[i].workCenterOut*1000).toLocaleString()
+				+'</div>';
+				
+				addTimeSeriesElement("Part QA + Process Parameter",new Date(vinH[i].timeStamp*1000).toLocaleString(),blockInput,divBorder);
+			break;
+			
+			case 'VINAFTQA':
+			/*
+			"vin": "V0001",
+            "quality": "GOOD",
+            "stageOwner": "SANDHYA",
+            "timeStamp": "1548416519",
+			*/
+			var blockInput = '<div class="timeline-body" align="left">' +
+				'VIN : ' + vinH[i].vin
+				+'<br>'+'QUALITY : ' + vinH[i].quality
+				+'<br>'+'TEST PERFORMED BY : '+ vinH[i].stageOwner
+				+'</div>';
+				
+				if(vinH[i].quality == "OK" || vinH[i].quality == "GOOD"){
+				divBorder = 'style="border: 2px solid #01a504;"';
+				}
+				if(vinH[i].quality == "FAIL" || vinH[i].quality == "BAD"){
+					divBorder = 'style="border: 2px solid #d9534f;"';
+				}		
+				addTimeSeriesElement("Vehicle QA",new Date(vinH[i].timeStamp*1000).toLocaleString(),blockInput,divBorder);
+				
+				divBorder = '';
+			break;
+			
+			case 'VINTODEALER':
+
+			/*"vin": "V0001",
+            "dealer": "D0001",
+            "stageOwner": "ABC CORP",
+            "timeStamp": "1548416678",*/
+			
+			var blockInput = '<div class="timeline-body" align="left">' + 
+				'VIN : ' + vinH[i].vin				
+				+'<br>'+ 'DEALER : '+ vinH[i].dealer
+				+'<br>'+ 'SOLD BY : '+ vinH[i].stageOwner
+				+'</div>';
+				
+				addTimeSeriesElement("Vehicle Send to Dealer",new Date(vinH[i].timeStamp*1000).toLocaleString(),blockInput,divBorder);
+			break;	
+			
+			case 'VINTOSALE':
+			/*
+			"vin": "V0001",
+            "owner": "AMIT",
+            "dealer": "XYZ MOTOR CORP",
+            "stageOwner": "XYZ",
+            "timeStamp": "1548321295",
+			*/
+				var blockInput = '<div class="timeline-body" align="left">' + 
+				'VIN : ' + vinH[i].vin				
+				+'<br>'+ 'OWNER : '+ vinH[i].owner
+				+'<br>'+ 'DEALER : '+ vinH[i].dealer
+				+'<br>'+ 'SOLD BY : '+ vinH[i].stageOwner
+				+'</div>';
+				
+				addTimeSeriesElement("Vehicle Sold",new Date(vinH[i].timeStamp*1000).toLocaleString(),blockInput,divBorder);
+			break;
+			
+			case 'SERVICE':
+			/*
+			"vin": "V0001",
+            "serviceID": "SERVICE0001",
+            "dealer": "SHAM SERVICE PROVIDER",
+            "serviceHistory": "WHEEL ALIGNMENT ISSUE",
+            "serviceDate": "1548417179",
+			*/
+			var blockInput = '<div class="timeline-body" align="left">' + 
+				'VIN : ' + vinH[i].vin
+				+'<br>'+'SERVICE ID : ' + vinH[i].serviceID
+				+'<br>'+'DEALER : ' + vinH[i].dealer
+				+'<br>'+'SERVICE HISTORY : ' + vinH[i].serviceHistory
+				+'</div>';
+				
+				addTimeSeriesElement("Service Details",new Date(vinH[i].timeStamp*1000).toLocaleString(),blockInput,divBorder);
+			break;
+			
+			case 'WARRANTY':
+			/*
+			"wDate": "1548418626",
+            "serviceID": "SERVICE0001",
+            "partNo": "MS0001",
+            "dealer": "SHAM SERVICE PROVIDER",
+            "partName": "FRONT LEFT WHEEL",
+            "description": "XYZ ISSUE",
+            "vin": "V0001",
+			*/
+				var blockInput = '<div class="timeline-body" align="left">' + 
+					'SERVICE ID : ' + vinH[i].serviceID
+					+'<br>'+ 'PART NO : '+ vinH[i].partNo
+					+'<br>'+ 'PART NAME: '+ vinH[i].partName
+					+'<br>'+ 'DEALER : ' + vinH[i].dealer
+					+'<br>'+ 'DESCRIPTION : '+vinH[i].description
+					+'</div>';
+					
+					//"SERVICE0001", "OP001", "CKP", "SLIDERISSUE", "UNDER_CLAIM"		
+					addTimeSeriesElement("Warranty Claim",new Date(vinH[i].timeStamp*1000).toLocaleString(),blockInput,divBorder);
+			break;
+			
+			case 'MARKOLDPART':
+			/*
+			 "vin": "V0001",
+            "vendorCode": "VC0001",
+            "manuSerialNo": "MS0001",
+            "timeStamp": "1548417924",
+			*/
+			var blockInput = '<div class="timeline-body" align="left">' + 
+				'VIN : ' + vinH[i].vin
+				+'<br>'+ 'VENDOR CODE : ' + vinH[i].vendorCode
+				+'<br>'+ 'MANUFACTURER SERIAL NO : ' + vinH[i].manuSerialNo
+				+'</div>';
+				
+				addTimeSeriesElement("Inactive Old Part",new Date(vinH[i].timeStamp*1000).toLocaleString(),blockInput,divBorder);
+			break;
+			
+			case 'POENTRY':
+			/*
+			"poNo": "PO0001",
+            "vins": [
+                "V0001",
+                "V0002",
+                "V0003"
+            ],
+            "releaseDate": "1548412432",
+            "vehicleType": "TATA NEXON XT",
+            "quantity": "3",
+            "ownership": "ABC CORP",
+            "timeStamp": "1548412432",
+            "partNo": "TNXXTV19"
+			*/
+				var blockInput = '<div class="timeline-body" align="left">' + 
+				'PRODUCTION ORDER NUMBER : ' + vinH[i].poNo
+				+'<br>'+ 'VINs : ' + vinH[i].vins
+				+'<br>'+ 'RELEASE DATE : ' + vinH[i].releaseDate
+				+'<br>'+ 'QUANTITY : ' + vinH[i].quantity
+				+'<br>'+ 'OWNERSHIP : ' + vinH[i].ownership
+				+'<br>'+ 'PART NUMBER : ' + vinH[i].partNo
+				+'</div>';
+				
+				addTimeSeriesElement("Production Order",new Date(vinH[i].timeStamp*1000).toLocaleString(),blockInput,divBorder);
+			break;			
+			
+			default:
+				console.log(vinH[i].fun + " Not handled");
+		}
+	}	
+}
+
+function addTimeSeriesElement(blockoperation,blockTimestamp,blockInput,divBorder){
+	 console.log("Operation");
+	 console.log(blockoperation);
+	 var ops = blockoperation;
+    if($('ul.timeline li').length % 2 == 0){
+            $('.timeline').prepend(
+            '<li class="timeline-inverted" style="color:#ffffff;z-index: 1;">'
+            +'<div class="timeline-badge info"><i class="fa fa-chain"></i>'
+			+'</div>'
+            +'<div class="timeline-panel"'+ divBorder +'>'
+            +'<div class="timeline-heading">'
+            +'<h4 class="timeline-title">'
+			+ops
+			+'</h4>'
+            +'<small class="text-white"><i class="fa fa-clock-o"></i>'
+			+blockTimestamp
+			+'</small>'
+            +'</div>'
+            +blockInput
+            +'</div>'
+            +'</li>'
+            );
+	}else{            
+            $('.timeline').prepend(
+            '<li style="color:#ffffff; z-index: 1;">'
+			+'<div class="timeline-badge info"><i class="fa fa-chain"></i>'
+			+'</div>'
+            +'<div class="timeline-panel"'+ divBorder +'>'
+            +'<div class="timeline-heading">'
+            +'<h4 class="timeline-title">'
+			+ops
+			+'</h4>'
+            +'<small class="text-white"><i class="fa fa-clock-o"></i>'
+			+blockTimestamp
+			+'</small>'
+            +'</div>'
+            +blockInput
+            +'</div>'
+            +'</li>'
+            );      
+        }
+	};
+
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Inventry Management</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+  <script src="./javascripts/app.js"></script>
+  
+</head>
+<body style ="background-color: #f0f0f0;color:#691e7c;">
+    
+<div class="container">
+  
+  <h2>Decentralized Spare Route Service</h2>
+  <span class="float-right" style="display: inline-block;">
+    <a href="#" onclick="sendVinQRScan()" class="btn btn-primary">Vin QR Scan</a><br>
+    <a href="#" onclick="sendComponentQRScan()" class="btn btn-primary">Component QR Scan</a><br>
+    <a href="#" onclick="callVehiclePartAfterQR()" class="btn btn-primary">Vehicle+Part map AfterQR</a><br>
+    <a href="#" onclick="callvehiclePartAfterQA()" class="btn btn-primary">Vehicle+Part map AfterQA</a><br>
+    <a href="#" onclick="callvehicleAfterQA()" class="btn btn-primary">Vehicle quality done & dom set</a><br>    
+    <a href="#" onclick="callVehicleSale()" class="btn btn-primary">Vehicle Sale</a><br>
+    <a href="#" onclick="callServiceEntry()" class="btn btn-primary">Service Entry</a><br>
+    <a href="#" onclick="callVinScanBeforeService()" class="btn btn-primary">SoldDate / ServiceHistory</a><br>
+    <a href="#" onclick="callRetrivePartActiveEntry()" class="btn btn-primary">Retrive Component Active Entry</a><br>
+    <a href="#" onclick="callmarkOldPartEOL_Inactive()" class="btn btn-primary">Mark Old Part InActice</a><br>
+    <a href="#" onclick="callwarrantyClaimEntry()" class="btn btn-primary">Warranty Claim Entry</a><br>
+    <a href="#" onclick="callretriveWarrantyClaim()" class="btn btn-primary">Retrieve Warrantyclaim against serivceID</a><br>
+    <a href="#" onclick="callvinDetailsForSupplier()" class="btn btn-primary">Retrieve Vin & part Details</a><br>
+    <a href="#" onclick="callgetSupplierVehiclePart()" class="btn btn-primary">GetSupplier Part details</a><br>
+    <a href="#" onclick="callgetProcessParameters()" class="btn btn-primary">Get Process parameters</a><br>
+    <h3>OEM UI Function</h3>
+    <a href="#" onclick="callretrieveOemPartsAgainstVin()" class="btn btn-primary">Get Parts Mapped to VIN</a><br>
+    <a href="#" onclick="callretrievePartLedger1()" class="btn btn-primary">Retrieve Part Ledger part-1</a><br>
+    <a href="#" onclick="callretrievePartLedger2()" class="btn btn-primary">Retrieve Part Ledger part-2</a><br>
+    <a href="#" onclick="callretrieveVehiclePartLedger1()" class="btn btn-primary">Retrieve Vehicle Part Ledger part-1</a><br>
+    <a href="#" onclick="callretrieveVehiclePartLedger2()" class="btn btn-primary">Retrieve Vehicle Part Ledger part-2</a><br>
+    callretrieveVehiclePartLedger2
+  </span>  
+  <h2 class ="navbar-right" id="poolEther" style="text-align:left;" >00000</h2>
+  <!-- <img class="navbar-right"  height="30" width="30" src="./app/image/Eth_icon.png" onclick="poolMoney()"/> -->
+  
+  
+  <ul class="nav nav-tabs" align="center">
+    <li class="active" ><a data-toggle="tab" href="#home">Home</a></li>
+    <li><a data-toggle="tab" href="#menu1">Supplier</a></li>
+    <!--<li><a data-toggle="tab" href="#menu2">Manufacturer</a></li>-->
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">      
+    </div>
+    <div id="menu1" class="tab-pane fade">    
+
+</div>
+
+    <div id="menu2" class="tab-pane fade">
+   
+  </div>
+  </div>
+</div>
+
+</body>
+</html>
